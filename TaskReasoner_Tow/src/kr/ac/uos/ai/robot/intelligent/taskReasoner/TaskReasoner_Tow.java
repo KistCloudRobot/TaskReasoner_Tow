@@ -67,7 +67,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 
 		initAddress();
 		//config();
-		interpreter = JAM.parse(new String[] {"TaskReasonerPlan/boot.jam"} );
+		interpreter = JAM.parse(new String[] {"./TaskReasonerTowPlan/boot.jam"} );
 		
 		ds = new TaskReasonerDataSource(this);
 		
