@@ -6,8 +6,8 @@ PLAN PERFORM loadPlanPackage(){
 	PRECONDITION:
 		FACT TaskReasoner($taskReasoner);
 	BODY:
-		$taskReasoner.loadPlanPackage("plan/common");
-		$taskReasoner.loadPlanPackage("plan/Demoplan");
-		$taskReasoner.loadPlanPackage("plan/BuiltInPolicy");
+		$taskReasoner.loadPlanPackage("TaskReasonerPlanlan/common");
+		$taskReasoner.loadPlanPackage("TaskReasonerPlanlan/Demoplan");
+		$taskReasoner.loadPlanPackage("TaskReasonerPlanlan/BuiltInPolicy");
 		
 }
