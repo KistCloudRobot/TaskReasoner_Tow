@@ -82,7 +82,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 		//server = new Server(this);
 		utilityCalculator = new UtilityCalculator(interpreter);
 		
-		ArbiAgentExecutor.execute("tcp://"+ENV_JMS_BROKER,  agentURIPrefix + TASKREASONER_ADDRESS, this, brokerType);
+		ArbiAgentExecutor.execute(ENV_JMS_BROKER,  agentURIPrefix + TASKREASONER_ADDRESS, this, brokerType);
 
 		loggerManager = LoggerManager.getInstance();
 		
@@ -96,10 +96,13 @@ public class TaskReasoner_Tow extends ArbiAgent {
 	public void initAddress() {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
-			ENV_JMS_BROKER = ip + ":61316";
-			ENV_AGENT_NAME = System.getenv("AGENT");
-			ENV_ROBOT_NAME = System.getenv("ROBOT");
-
+			//ENV_JMS_BROKER = "tcp://"+System.getenv("JMS_BROKER");
+			//ENV_AGENT_NAME = System.getenv("AGENT");
+			//ENV_ROBOT_NAME = System.getenv("ROBOT");
+			
+			ENV_JMS_BROKER = "tcp://"+System.getenv("JMS_BROKER") + ":61113";
+			ENV_AGENT_NAME = "Tow2";
+			ENV_ROBOT_NAME = "AMR_TOW2";
 			TASKMANAGER_ADDRESS = agentURIPrefix + ARBI_PREFIX + ENV_AGENT_NAME + "/TaskManager";
 			TASKREASONER_ADDRESS = ARBI_PREFIX + ENV_AGENT_NAME + "/TaskReasoner";
 		} catch (UnknownHostException e) {
@@ -165,7 +168,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 	@Override
 	public void onStart() {
 		System.out.println("====onStart====");
-		ds.connect("tcp://" + ENV_JMS_BROKER, dsURIPrefix+TASKREASONER_ADDRESS, 2);
+		ds.connect(ENV_JMS_BROKER, dsURIPrefix+TASKREASONER_ADDRESS, 2);
 		//goal and context is wrapped
 		//String subscriveGoal = "(rule (fact (goal $goal $precondition $postcondition)) --> (notify (goal $goal $precondition $postcondition)))";
 		//ds.subscribe(subscriveGoal);
