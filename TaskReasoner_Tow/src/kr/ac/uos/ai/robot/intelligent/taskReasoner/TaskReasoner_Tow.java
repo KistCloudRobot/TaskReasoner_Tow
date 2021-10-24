@@ -43,7 +43,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 	public static String ENV_ROBOT_NAME;
 	public static final String ARBI_PREFIX = "www.arbi.com/";
 	
-	private static String brokerURI = "tcp://172.16.165.204:61114";
+	private static String brokerURI = "tcp://172.16.165.204:61112";
 	private static int brokerType = 2;
 	private static String TASKREASONER_ADDRESS;
 	private static String TASKMANAGER_ADDRESS;
@@ -100,9 +100,9 @@ public class TaskReasoner_Tow extends ArbiAgent {
 			//ENV_AGENT_NAME = System.getenv("AGENT");
 			//ENV_ROBOT_NAME = System.getenv("ROBOT");
 			
-			ENV_JMS_BROKER = "tcp://172.16.165.204" + ":61114";
-			ENV_AGENT_NAME = "Tow1";
-			ENV_ROBOT_NAME = "AMR_TOW1";
+			ENV_JMS_BROKER = "tcp://172.16.165.204" + ":61112";
+			ENV_AGENT_NAME = "Tow2";
+			ENV_ROBOT_NAME = "AMR_TOW2";
 			TASKMANAGER_ADDRESS = agentURIPrefix + ARBI_PREFIX + ENV_AGENT_NAME + "/TaskManager";
 			TASKREASONER_ADDRESS = ARBI_PREFIX + ENV_AGENT_NAME + "/TaskReasoner";
 		} catch (UnknownHostException e) {
