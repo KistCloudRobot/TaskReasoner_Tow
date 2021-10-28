@@ -17,7 +17,7 @@ PLAN PERFORM WaitGoalComplete($goal) {
 	ID : "WaitGoalCompleteMovingRackTrasportedRequestedFrom"
 	PRECONDITION :
 		FACT GoalCompleted($goal, $reportGL);
-		$goal == "PalletTransportedRequestedFrom";
+		$goal == "MovingRackTransportedRequestedFrom";
 		FACT GLMessageManager($glManager);
 	BODY :
 		System.out.println("start WaitGoalComplete : WaitGoalCompleteMovingRackTrasportedRequestedFrom");

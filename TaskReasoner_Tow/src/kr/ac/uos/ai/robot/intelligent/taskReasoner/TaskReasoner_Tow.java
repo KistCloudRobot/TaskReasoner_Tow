@@ -43,7 +43,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 	public static String ENV_ROBOT_NAME;
 	public static final String ARBI_PREFIX = "www.arbi.com/";
 	
-	private static String brokerURI = "tcp://172.16.165.204:61112";
+	private static String brokerURI = "tcp://172.16.165.204:61114";
 	private static int brokerType = 2;
 	private static String TASKREASONER_ADDRESS;
 	private static String TASKMANAGER_ADDRESS;
@@ -100,9 +100,9 @@ public class TaskReasoner_Tow extends ArbiAgent {
 			//ENV_AGENT_NAME = System.getenv("AGENT");
 			//ENV_ROBOT_NAME = System.getenv("ROBOT");
 			
-			ENV_JMS_BROKER = "tcp://172.16.165.204" + ":61112";
-			ENV_AGENT_NAME = "Tow2";
-			ENV_ROBOT_NAME = "AMR_TOW2";
+			ENV_JMS_BROKER = "tcp://127.0.0.1" + ":61114";
+			ENV_AGENT_NAME = "Tow1";
+			ENV_ROBOT_NAME = "AMR_TOW1";
 			TASKMANAGER_ADDRESS = agentURIPrefix + ARBI_PREFIX + ENV_AGENT_NAME + "/TaskManager";
 			TASKREASONER_ADDRESS = ARBI_PREFIX + ENV_AGENT_NAME + "/TaskReasoner";
 		} catch (UnknownHostException e) {
@@ -219,6 +219,15 @@ public class TaskReasoner_Tow extends ArbiAgent {
 		ArbiAgent agent = new TaskReasoner_Tow();
 	}
 	
+	public void sleep(int count) {
+		try {
+			Thread.sleep(count);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public boolean dequeueMessage() {
 		
 		if (messageQueue.isEmpty())
@@ -255,16 +264,11 @@ public class TaskReasoner_Tow extends ArbiAgent {
 		}
 	}
 		
-	public boolean sendToTM(String type, String name, Object... args) {
-		//System.out.println("send to tm : " + type + ", " +name);
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		this.send(TASKMANAGER_ADDRESS, glMessageManager.makeGLMessage(type, name, args));
+	public boolean sendToTM(String type, String gl) {
 		
+		System.out.println("send to tm : " + type + ", " + gl);
+		this.send(TASKMANAGER_ADDRESS, "(" + type + " " + gl + ")");
+
 		return true;
 	}
 	
