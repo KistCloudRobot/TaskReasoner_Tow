@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import kr.ac.uos.ai.arbi.model.GLFactory;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
 import kr.ac.uos.ai.arbi.model.parser.ParseException;
-import kr.ac.uos.ai.robot.intelligent.taskReasoner.TaskReasoner_Tow;
+import kr.ac.uos.ai.robot.intelligent.taskReasoner.TaskReasoner_Tow2;
 import kr.ac.uos.ai.robot.intelligent.taskReasoner.action.argument.GoalAppendArgument;
 import kr.ac.uos.ai.robot.intelligent.taskReasoner.action.argument.ServiceAppendArgument;
 
 public class ServiceModelGenerator {
 
-	private TaskReasoner_Tow								taskReasoner;
+	private TaskReasoner_Tow2								taskReasoner;
 	
 	private String										servicePackageID;
 	private String										servicePackageName;
@@ -24,7 +24,7 @@ public class ServiceModelGenerator {
 	private GeneralizedList								safety;
 	*/
 	
-	public ServiceModelGenerator(TaskReasoner_Tow taskReasoner) {
+	public ServiceModelGenerator(TaskReasoner_Tow2 taskReasoner) {
 		this.taskReasoner = taskReasoner;
 	}
 	

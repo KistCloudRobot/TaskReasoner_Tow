@@ -36,7 +36,7 @@ import kr.ac.uos.ai.robot.intelligent.taskReasoner.utility.UtilityCalculator;
 import uos.ai.jam.Interpreter;
 import uos.ai.jam.JAM;
 
-public class TaskReasoner_Tow extends ArbiAgent {
+public class TaskReasoner_Tow2 extends ArbiAgent {
 
 	public static String ENV_JMS_BROKER;
 	public static String ENV_AGENT_NAME;
@@ -64,7 +64,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 	private UtilityCalculator							utilityCalculator;
 	
 
-	public TaskReasoner_Tow() {
+	public TaskReasoner_Tow2() {
 
 
 		initAddress();
@@ -100,9 +100,9 @@ public class TaskReasoner_Tow extends ArbiAgent {
 			//ENV_AGENT_NAME = System.getenv("AGENT");
 			//ENV_ROBOT_NAME = System.getenv("ROBOT");
 			
-			ENV_JMS_BROKER = "tcp://127.0.0.1" + ":61114";
-			ENV_AGENT_NAME = "Tow1";
-			ENV_ROBOT_NAME = "AMR_TOW1";
+			ENV_JMS_BROKER = "tcp://127.0.0.1" + ":61412";
+			ENV_AGENT_NAME = "Tow2";
+			ENV_ROBOT_NAME = "AMR_TOW2";
 			TASKMANAGER_ADDRESS = agentURIPrefix + ARBI_PREFIX + ENV_AGENT_NAME + "/TaskManager";
 			TASKREASONER_ADDRESS = ARBI_PREFIX + ENV_AGENT_NAME + "/TaskReasoner";
 		} catch (UnknownHostException e) {
@@ -216,7 +216,7 @@ public class TaskReasoner_Tow extends ArbiAgent {
 	}
 	
 	public static void main(String[] args) {
-		ArbiAgent agent = new TaskReasoner_Tow();
+		ArbiAgent agent = new TaskReasoner_Tow2();
 	}
 	
 	public void sleep(int count) {
