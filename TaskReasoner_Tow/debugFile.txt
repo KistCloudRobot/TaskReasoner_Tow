@@ -518,3 +518,16 @@
 [ExceptionLog 2021-11-12 12:51:02]ghost msg : Subscribe:1636689062642 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
 [ExceptionLog 2021-11-12 13:01:58]ghost msg : Subscribe:1636689718922 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
 [ExceptionLog 2021-11-12 13:14:03]ghost msg : Subscribe:1636690443465 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 13:56:51]ghost msg : Subscribe:1636693011475 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 14:41:39]ghost msg : Subscribe:1636695699501 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 14:51:20]ghost msg : Subscribe:1636696280357 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 14:54:22]ghost msg : Subscribe:1636696462899 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 15:05:18]ghost msg : Subscribe:1636697118004 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 15:13:58]ghost msg : Subscribe:1636697638851 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 15:28:32]ghost msg : Subscribe:1636698512508 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 15:31:46]ghost msg : Subscribe:1636698706725 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 15:40:37]ghost msg : Subscribe:1636699237137 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 15:52:25]ghost msg : Subscribe:1636699945249 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 16:07:09]ghost msg : Subscribe:1636700829661 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 16:11:57]ghost msg : Subscribe:1636701117350 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
+[ExceptionLog 2021-11-12 16:12:51]ghost msg : Subscribe:1636701171217 action: Resultclient : ds://www.arbi.com/Tow2/TaskReasoner
