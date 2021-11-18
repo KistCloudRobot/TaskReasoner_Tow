@@ -13,11 +13,11 @@ PLAN PERFORM WaitGoalComplete($goal) {
 }
 
 
-PLAN PERFORM WaitGoalComplete($goal) {
+PLAN PERFORM WaitGoalComplete($goalName) {
 	ID : "WaitGoalCompleteMovingRackTrasportedRequestedFrom"
 	PRECONDITION :
-		FACT GoalCompleted($goal, $reportGL);
-		$goal == "MovingRackTransportedRequestedFrom";
+		FACT GoalCompleted($goalName, $reportGL);
+		$goalName == "MovingRackTransportedRequestedFrom";
 		FACT GLMessageManager($glManager);
 	BODY :
 		System.out.println("start WaitGoalComplete : WaitGoalCompleteMovingRackTrasportedRequestedFrom");
@@ -46,12 +46,12 @@ PLAN PERFORM WaitGoalComplete($goal) {
 		System.out.println($startStation);
 		$endStation = $glManager.retrieveGLExpression($argumentGL, 2);
 		System.out.println($endStation);
+		$goal = $glManager.escapeGL($goalGL);
+		ASSERT MovingRackTransportationRequested($goal, $goalID, $object, $startStation, $endStation);
 		
-		ASSERT MovingRackTransportationRequested($goalID, $object, $startStation, $endStation);
-		
+		RETRACT GoalCompleted($goalName, $reportGL);
 		System.out.println("end WaitGoalComplete");
 		
-		RETRACT GoalCompleted($goal, $goalGL);
 		
 	UTILITY :20;
 }

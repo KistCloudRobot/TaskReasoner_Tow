@@ -100,7 +100,7 @@ public class TaskReasoner_Tow2 extends ArbiAgent {
 			//ENV_AGENT_NAME = System.getenv("AGENT");
 			//ENV_ROBOT_NAME = System.getenv("ROBOT");
 			
-			ENV_JMS_BROKER = "tcp://172.16.165.171" + ":61412";
+			ENV_JMS_BROKER = "tcp://192.168.0.14" + ":61412";
 			ENV_AGENT_NAME = "Tow2";
 			ENV_ROBOT_NAME = "AMR_TOW2";
 			TASKMANAGER_ADDRESS = agentURIPrefix + ARBI_PREFIX + ENV_AGENT_NAME + "/TaskManager";
@@ -247,8 +247,10 @@ public class TaskReasoner_Tow2 extends ArbiAgent {
 
 					glMessageManager.assertContext(gl.getExpression(0).asGeneralizedList());
 				} else if (gl.getName().equals("goalComplete")) {
-					glMessageManager.assertContext(gl.getExpression(0).asGeneralizedList());
-					glMessageManager.assertFact("GoalCompleted",gl.getExpression(0).asGeneralizedList().getName(), gl.getExpression(0).asGeneralizedList().toString());
+					//glMessageManager.assertContext(gl.getExpression(0).asGeneralizedList());
+					GeneralizedList goalGL = gl.getExpression(0).asGeneralizedList();
+					System.out.println("completed goal name : " + goalGL.getName());
+					glMessageManager.assertFact("GoalCompleted",goalGL.getName(),goalGL.toString());
 				} else if(gl.getExpression(0).isGeneralizedList()) {
 					System.out.println(gl.toString());
 				} else {
