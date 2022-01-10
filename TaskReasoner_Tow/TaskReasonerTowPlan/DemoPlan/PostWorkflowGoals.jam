@@ -5,7 +5,7 @@ PLAN CONCLUDE PostWorkflowGoals() {
 		System.out.println("==post start==");
 				
 		//POST ACHIEVE ThrowWorkflow("StoringCarrier", "PalletTransportation");
-		POST ACHIEVE ThrowWorkflow("UnstoringSmallCarrier", "MovingRackTransportation");
+		POST ACHIEVE ThrowWorkflow();
 		
 		
 		RETRACT PostWorkflowGoals();
